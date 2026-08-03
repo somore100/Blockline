@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# Build output
+dist/
+build_tools/
+*.spec
+logo.ico
+
+# User-specific runtime data - not source, shouldn't be committed
+user_data/
+blockline_saves/
+
+# Editor/OS cruft
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
