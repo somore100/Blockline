@@ -88,3 +88,10 @@ Blockline is early — architecture and design decisions are still open. If you'
 
 ## License
 
+Blockline is source-available software.
+
+The source code is available for viewing, learning, modification, and non-commercial forks under the [Blockline Source-Available License](LICENSE).
+
+Commercial distribution of Blockline or substantially derived versions is not permitted without permission from the copyright holder.
+
+See the [LICENSE](LICENSE) file for the full terms.
