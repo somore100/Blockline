@@ -1,0 +1,120 @@
+{
+  "html_page": {
+    "display_name": "HTML Page",
+    "category": "Basic",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Root page structure - a container for the whole document's body content. No concept_id: page structure has no equivalent in general-purpose programming languages.",
+    "template": "<!DOCTYPE html>\n<html>\n<head>\n<title>[[title]]</title>\n</head>\n<body>\n[[body]]\n</body>\n</html>\n",
+    "params": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "My Page"
+      }
+    ]
+  },
+  "div": {
+    "display_name": "Div Container",
+    "category": "Basic",
+    "is_container": true,
+    "empty_body": "",
+    "description": "A generic container element for grouping other elements.",
+    "template": "<div>\n[[body]]\n</div>\n",
+    "params": []
+  },
+  "heading": {
+    "display_name": "Heading",
+    "category": "Basic",
+    "description": "A heading element (h1-h6).",
+    "template": "<h[[level]]>[[text]]</h[[level]]>\n",
+    "params": [
+      {
+        "name": "level",
+        "type": "number",
+        "default": "1"
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "default": "Heading"
+      }
+    ]
+  },
+  "paragraph": {
+    "display_name": "Paragraph",
+    "category": "Basic",
+    "description": "A paragraph of text.",
+    "template": "<p>[[text]]</p>\n",
+    "params": [
+      {
+        "name": "text",
+        "type": "string",
+        "default": "Paragraph text"
+      }
+    ]
+  },
+  "link": {
+    "display_name": "Link",
+    "category": "Basic",
+    "description": "A hyperlink.",
+    "template": "<a href=\"[[url]]\">[[text]]</a>\n",
+    "params": [
+      {
+        "name": "url",
+        "type": "string",
+        "default": "https://example.com"
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "default": "Link text"
+      }
+    ]
+  },
+  "image": {
+    "display_name": "Image",
+    "category": "Basic",
+    "description": "An image element.",
+    "template": "<img src=\"[[url]]\" alt=\"[[alt]]\">\n",
+    "params": [
+      {
+        "name": "url",
+        "type": "string",
+        "default": "image.png"
+      },
+      {
+        "name": "alt",
+        "type": "string",
+        "default": "description"
+      }
+    ]
+  },
+  "comment": {
+    "concept_id": "comment",
+    "display_name": "Comment",
+    "category": "Basic",
+    "description": "An HTML comment - genuinely maps to the universal 'comment' concept, unlike most other HTML blocks.",
+    "template": "<!-- [[text]] -->\n",
+    "params": [
+      {
+        "name": "text",
+        "type": "string",
+        "default": "This is a comment"
+      }
+    ]
+  },
+  "raw_code": {
+    "display_name": "Raw HTML",
+    "category": "Advanced",
+    "description": "Write raw HTML directly.",
+    "template": "[[code]]\n",
+    "params": [
+      {
+        "name": "code",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  }
+}

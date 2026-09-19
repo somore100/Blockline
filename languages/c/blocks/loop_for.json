@@ -1,0 +1,26 @@
+{
+  "concept_id": "loop_for",
+  "display_name": "For Loop",
+  "category": "Control",
+  "is_container": true,
+  "empty_body": "",
+  "description": "Classic indexed for loop. C has no built-in range-based/foreach iteration over plain arrays, so this uses start/end rather than the universal 'iterable' slot.",
+  "template": "for (int [[variable]] = [[start]]; [[variable]] < [[end]]; [[variable]]++) {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "i"
+    },
+    {
+      "name": "start",
+      "type": "expression",
+      "default": "0"
+    },
+    {
+      "name": "end",
+      "type": "expression",
+      "default": "10"
+    }
+  ]
+}

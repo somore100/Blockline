@@ -1,0 +1,15 @@
+[
+  {
+    "id": "function",
+    "node_kind": "function_declaration",
+    "header_template": "function [[name]]([[params]]) {",
+    "is_entry_point": false
+  },
+  {
+    "id": "start",
+    "node_kind": null,
+    "header_template": null,
+    "is_entry_point": true,
+    "required": false
+  }
+]

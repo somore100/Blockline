@@ -1,0 +1,19 @@
+{
+  "concept_id": "assign",
+  "display_name": "Assign Variable",
+  "category": "Basic",
+  "description": "Set a variable to a value.",
+  "template": "[[variable]] = [[value]];\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "x"
+    },
+    {
+      "name": "value",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

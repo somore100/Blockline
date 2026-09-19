@@ -1,0 +1,16 @@
+{
+  "concept_id": "if",
+  "display_name": "If",
+  "category": "Control",
+  "is_container": true,
+  "empty_body": "",
+  "description": "Runs the body only when the condition is true.",
+  "template": "if ([[condition]]) {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "condition",
+      "type": "boolean",
+      "default": "true"
+    }
+  ]
+}

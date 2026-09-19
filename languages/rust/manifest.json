@@ -1,0 +1,7 @@
+{
+  "name": "Rust",
+  "version": "1.0.0",
+  "author": "Blockliner",
+  "icon": "rust.png",
+  "comment_token": "//"
+}

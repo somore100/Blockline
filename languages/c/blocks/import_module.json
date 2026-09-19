@@ -1,0 +1,13 @@
+{
+  "display_name": "Include Header",
+  "category": "Advanced",
+  "description": "Includes a header file. C standard headers keep the .h extension (unlike modern C++).",
+  "template": "#include <[[module]]>\n",
+  "params": [
+    {
+      "name": "module",
+      "type": "identifier",
+      "default": "stdio.h"
+    }
+  ]
+}

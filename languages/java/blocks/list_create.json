@@ -1,0 +1,24 @@
+{
+  "concept_id": "list_create",
+  "display_name": "Create List",
+  "category": "Data Structures",
+  "description": "Creates a mutable ArrayList with initial items, using fully-qualified names so it works without extra import blocks.",
+  "template": "var [[variable]] = new java.util.ArrayList<[[type]]>(java.util.List.of([[items]]));\n",
+  "params": [
+    {
+      "name": "type",
+      "type": "string",
+      "default": "Integer"
+    },
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "myList"
+    },
+    {
+      "name": "items",
+      "type": "expression",
+      "default": "1, 2, 3"
+    }
+  ]
+}

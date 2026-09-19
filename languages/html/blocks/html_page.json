@@ -1,0 +1,15 @@
+{
+  "display_name": "HTML Page",
+  "category": "Basic",
+  "is_container": true,
+  "empty_body": "",
+  "description": "Root page structure - a container for the whole document's body content. No concept_id: page structure has no equivalent in general-purpose programming languages.",
+  "template": "<!DOCTYPE html>\n<html>\n<head>\n<title>[[title]]</title>\n</head>\n<body>\n[[body]]\n</body>\n</html>\n",
+  "params": [
+    {
+      "name": "title",
+      "type": "string",
+      "default": "My Page"
+    }
+  ]
+}

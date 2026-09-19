@@ -1,0 +1,24 @@
+{
+  "concept_id": "list_create",
+  "display_name": "Create Slice",
+  "category": "Data Structures",
+  "description": "Creates a slice with initial items.",
+  "template": "[[variable]] := [][[type]]{[[items]]}\n",
+  "params": [
+    {
+      "name": "type",
+      "type": "string",
+      "default": "int"
+    },
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "myList"
+    },
+    {
+      "name": "items",
+      "type": "expression",
+      "default": "1, 2, 3"
+    }
+  ]
+}

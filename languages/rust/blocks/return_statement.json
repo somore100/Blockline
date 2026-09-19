@@ -1,0 +1,14 @@
+{
+  "concept_id": "return",
+  "display_name": "Return",
+  "category": "Functions",
+  "description": "Explicit early return of a value from a function (Rust functions can also return via a final expression with no semicolon, which this block does not cover).",
+  "template": "return [[value]];\n",
+  "params": [
+    {
+      "name": "value",
+      "type": "expression",
+      "default": ""
+    }
+  ]
+}

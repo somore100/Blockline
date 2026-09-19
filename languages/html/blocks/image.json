@@ -1,0 +1,18 @@
+{
+  "display_name": "Image",
+  "category": "Basic",
+  "description": "An image element.",
+  "template": "<img src=\"[[url]]\" alt=\"[[alt]]\">\n",
+  "params": [
+    {
+      "name": "url",
+      "type": "string",
+      "default": "image.png"
+    },
+    {
+      "name": "alt",
+      "type": "string",
+      "default": "description"
+    }
+  ]
+}

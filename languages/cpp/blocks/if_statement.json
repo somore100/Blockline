@@ -1,0 +1,16 @@
+{
+  "concept_id": "if",
+  "display_name": "If Statement",
+  "category": "Control",
+  "description": "Conditional execution based on a condition.",
+  "is_container": true,
+  "empty_body": "",
+  "template": "if ([[condition]]) {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "condition",
+      "type": "boolean",
+      "default": "true"
+    }
+  ]
+}

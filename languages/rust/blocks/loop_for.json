@@ -1,0 +1,21 @@
+{
+  "concept_id": "loop_for",
+  "display_name": "For Loop",
+  "category": "Control",
+  "is_container": true,
+  "empty_body": "",
+  "description": "Iterates over an iterable/range - idiomatic Rust, matches the universal 'iterable' slot directly (e.g. try '0..10' as the iterable for a numeric range).",
+  "template": "for [[variable]] in [[iterable]] {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "item"
+    },
+    {
+      "name": "iterable",
+      "type": "expression",
+      "default": "0..10"
+    }
+  ]
+}

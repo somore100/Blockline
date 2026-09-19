@@ -1,0 +1,19 @@
+{
+  "concept_id": "list_create",
+  "display_name": "Create Vector",
+  "category": "Data Structures",
+  "description": "Creates a growable Vec using the vec! macro. Declared 'mut' so list_append works on it immediately.",
+  "template": "let mut [[variable]] = vec![[[items]]];\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "my_vec"
+    },
+    {
+      "name": "items",
+      "type": "expression",
+      "default": "1, 2, 3"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "concept_id": "loop_while",
+  "display_name": "While Loop",
+  "category": "Control",
+  "is_container": true,
+  "empty_body": "",
+  "description": "Go has no 'while' keyword - a bare 'for' with just a condition is the idiomatic equivalent.",
+  "template": "for [[condition]] {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "condition",
+      "type": "boolean",
+      "default": "true"
+    }
+  ]
+}

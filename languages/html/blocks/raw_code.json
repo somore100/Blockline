@@ -1,0 +1,13 @@
+{
+  "display_name": "Raw HTML",
+  "category": "Advanced",
+  "description": "Write raw HTML directly.",
+  "template": "[[code]]\n",
+  "params": [
+    {
+      "name": "code",
+      "type": "expression",
+      "default": ""
+    }
+  ]
+}

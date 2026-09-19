@@ -1,0 +1,40 @@
+{
+  "_comment": "Master concept list (Phase 1). Every entry here is a universal action - things that exist in basically every language. A language pack's block CAN reference one of these ids via 'concept_id' to become translatable via 'Convert to...'. A block does NOT have to reference one - GUI/HTML/raw_code blocks legitimately have no universal equivalent and just stay language-specific (Phase 3, point 9-10).",
+
+  "slot_types": {
+    "expression": {
+      "description": "Any value or expression. Not validated beyond basic sanity - expressions are inherently language-syntax-dependent, so the block/template is responsible for using it correctly.",
+      "forbidden_substrings": []
+    },
+    "identifier": {
+      "description": "A variable, function, or list name. Must be safe to drop directly into generated source as a bare name.",
+      "forbidden_substrings": [";", "(", ")", "'", "\"", " ", "\n"]
+    },
+    "number": {
+      "description": "A numeric literal.",
+      "forbidden_substrings": [";", "'", "\"", " "]
+    },
+    "string": {
+      "description": "Free text - comments, string literal contents, etc. Templates are responsible for adding quotes/escaping if the target language needs them.",
+      "forbidden_substrings": []
+    },
+    "boolean": {
+      "description": "A boolean literal or boolean expression (e.g. 'True', 'x > 5').",
+      "forbidden_substrings": [";"]
+    }
+  },
+
+  "concepts": [
+    { "id": "output",       "name": "Output / Print",   "category": "Basic",          "slots": [{ "name": "value", "type": "expression" }] },
+    { "id": "assign",       "name": "Set Variable",     "category": "Basic",          "slots": [{ "name": "variable", "type": "identifier" }, { "name": "value", "type": "expression" }] },
+    { "id": "comment",      "name": "Comment",          "category": "Basic",          "slots": [{ "name": "text", "type": "string" }] },
+    { "id": "if",           "name": "If",               "category": "Control",        "is_container": true, "slots": [{ "name": "condition", "type": "boolean" }] },
+    { "id": "loop_for",     "name": "For Loop",         "category": "Control",        "is_container": true, "slots": [{ "name": "variable", "type": "identifier" }, { "name": "iterable", "type": "expression" }] },
+    { "id": "loop_while",   "name": "While Loop",       "category": "Control",        "is_container": true, "slots": [{ "name": "condition", "type": "boolean" }] },
+    { "id": "func_def",     "name": "Define Function",  "category": "Functions",      "is_container": true, "slots": [{ "name": "name", "type": "identifier" }, { "name": "params", "type": "expression" }] },
+    { "id": "func_call",    "name": "Call Function",    "category": "Functions",      "slots": [{ "name": "name", "type": "identifier" }, { "name": "args", "type": "expression" }] },
+    { "id": "return",       "name": "Return",           "category": "Functions",      "slots": [{ "name": "value", "type": "expression" }] },
+    { "id": "list_create",  "name": "Create List",      "category": "Data Structures", "slots": [{ "name": "variable", "type": "identifier" }, { "name": "items", "type": "expression" }] },
+    { "id": "list_append",  "name": "Append to List",   "category": "Data Structures", "slots": [{ "name": "list", "type": "identifier" }, { "name": "item", "type": "expression" }] }
+  ]
+}

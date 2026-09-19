@@ -1,0 +1,21 @@
+{
+  "concept_id": "loop_for",
+  "display_name": "For Loop",
+  "category": "Control",
+  "description": "Iterate over a range or container using a range-based for loop.",
+  "is_container": true,
+  "empty_body": "",
+  "template": "for (auto&& [[variable]] : [[iterable]]) {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "item"
+    },
+    {
+      "name": "iterable",
+      "type": "expression",
+      "default": "myList"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "display_name": "Require Module",
+  "category": "Advanced",
+  "description": "Imports a module using Node.js CommonJS require() - simpler than ES module import/export syntax, which needs separate name and path slots.",
+  "template": "const [[module]] = require(\"[[module]]\");\n",
+  "params": [
+    {
+      "name": "module",
+      "type": "identifier",
+      "default": "fs"
+    }
+  ]
+}

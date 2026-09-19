@@ -1,0 +1,14 @@
+{
+  "concept_id": "comment",
+  "display_name": "Comment",
+  "category": "Basic",
+  "description": "Adds a comment to the code.",
+  "template": "// [[text]]\n",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "default": "This is a comment"
+    }
+  ]
+}

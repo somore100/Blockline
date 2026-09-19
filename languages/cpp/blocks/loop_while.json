@@ -1,0 +1,16 @@
+{
+  "concept_id": "loop_while",
+  "display_name": "While Loop",
+  "category": "Control",
+  "description": "Repeat as long as a condition is true.",
+  "is_container": true,
+  "empty_body": "",
+  "template": "while ([[condition]]) {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "condition",
+      "type": "boolean",
+      "default": "true"
+    }
+  ]
+}

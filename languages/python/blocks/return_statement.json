@@ -1,0 +1,20 @@
+{
+  "concept_id": "return",
+  "display_name": "Return",
+  "category": "Functions",
+  "description": "Returns a value from a function.",
+  "template": "return [[value]]\n",
+  "params": [
+    {
+      "name": "value",
+      "type": "expression",
+      "default": ""
+    }
+  ],
+  "match": {
+    "node_kind": "return_statement",
+    "slot_map": {
+      "value": "child:0"
+    }
+  }
+}

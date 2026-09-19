@@ -1,0 +1,23 @@
+{
+  "concept_id": "loop_while",
+  "display_name": "While Loop",
+  "category": "Control",
+  "is_container": true,
+  "empty_body": "pass",
+  "description": "Repeats the blocks inside its body while the condition is true.",
+  "template": "while [[condition]]:\n[[body]]\n",
+  "params": [
+    {
+      "name": "condition",
+      "type": "boolean",
+      "default": "True"
+    }
+  ],
+  "match": {
+    "node_kind": "while_statement",
+    "slot_map": {
+      "condition": "condition",
+      "body": "body"
+    }
+  }
+}

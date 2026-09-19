@@ -1,0 +1,13 @@
+{
+  "display_name": "Using Directive",
+  "category": "Advanced",
+  "description": "Imports a namespace.",
+  "template": "using [[module]];\n",
+  "params": [
+    {
+      "name": "module",
+      "type": "identifier",
+      "default": "System"
+    }
+  ]
+}

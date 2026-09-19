@@ -1,0 +1,14 @@
+{
+  "concept_id": "output",
+  "display_name": "Print Output",
+  "category": "Basic",
+  "description": "Prints an integer using printf. Assumes an int/%d value - use raw_code for other format specifiers (C has no generic print).",
+  "template": "printf(\"%d\\n\", [[value]]);\n",
+  "params": [
+    {
+      "name": "value",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

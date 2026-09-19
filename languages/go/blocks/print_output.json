@@ -1,0 +1,14 @@
+{
+  "concept_id": "output",
+  "display_name": "Print Output",
+  "category": "Basic",
+  "description": "Prints a value followed by a newline, using the fmt package.",
+  "template": "fmt.Println([[value]])\n",
+  "params": [
+    {
+      "name": "value",
+      "type": "expression",
+      "default": "\"Hello, World!\""
+    }
+  ]
+}

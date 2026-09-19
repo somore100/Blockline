@@ -1,0 +1,16 @@
+{
+  "concept_id": "loop_while",
+  "display_name": "While Loop",
+  "category": "Control",
+  "is_container": true,
+  "empty_body": "",
+  "description": "Repeats the body while the condition is true. No parentheses around the condition.",
+  "template": "while [[condition]] {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "condition",
+      "type": "boolean",
+      "default": "true"
+    }
+  ]
+}

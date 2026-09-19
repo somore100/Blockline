@@ -1,0 +1,26 @@
+{
+  "concept_id": "list_append",
+  "display_name": "Append to List",
+  "category": "Data Structures",
+  "description": "Adds an item to the end of a list.",
+  "template": "[[list]].append([[item]])\n",
+  "params": [
+    {
+      "name": "list",
+      "type": "identifier",
+      "default": "my_list"
+    },
+    {
+      "name": "item",
+      "type": "expression",
+      "default": "item"
+    }
+  ],
+  "match": {
+    "node_kind": "call",
+    "slot_map": {
+      "list": "function.object",
+      "item": "arguments"
+    }
+  }
+}

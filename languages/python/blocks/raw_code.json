@@ -1,0 +1,13 @@
+{
+  "display_name": "Custom Code",
+  "category": "Advanced",
+  "description": "Write any Python code manually. No concept_id - this is the deliberate non-translatable escape hatch (Phase 3 point 10), unchanged behavior from V1.",
+  "template": "[[code]]\n",
+  "params": [
+    {
+      "name": "code",
+      "type": "expression",
+      "default": ""
+    }
+  ]
+}

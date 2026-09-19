@@ -1,0 +1,18 @@
+{
+  "display_name": "Append to Array (not supported)",
+  "category": "Data Structures",
+  "description": "Plain C arrays are fixed-size and cannot grow at runtime. No concept_id: this generates a comment, not code, so it never silently produces something that looks like it works but doesn't. Use malloc/realloc manually (see raw_code) for a real growable array.",
+  "template": "// TODO: C arrays are fixed-size - to append [[item]] to [[list]], declare it with malloc/realloc instead of a fixed array literal\n",
+  "params": [
+    {
+      "name": "list",
+      "type": "identifier",
+      "default": "my_array"
+    },
+    {
+      "name": "item",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "concept_id": "list_append",
+  "display_name": "Append to List",
+  "category": "Data Structures",
+  "description": "Add an item to the end of a std::vector.",
+  "template": "[[list]].push_back([[item]]);\n",
+  "params": [
+    {
+      "name": "list",
+      "type": "identifier",
+      "default": "myList"
+    },
+    {
+      "name": "item",
+      "type": "expression",
+      "default": "item"
+    }
+  ]
+}

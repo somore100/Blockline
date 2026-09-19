@@ -1,0 +1,13 @@
+{
+  "display_name": "Raw Code",
+  "category": "Advanced",
+  "description": "Write raw C# code directly.",
+  "template": "[[code]]\n",
+  "params": [
+    {
+      "name": "code",
+      "type": "expression",
+      "default": ""
+    }
+  ]
+}

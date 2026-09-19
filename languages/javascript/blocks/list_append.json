@@ -1,0 +1,19 @@
+{
+  "concept_id": "list_append",
+  "display_name": "Append to Array",
+  "category": "Data Structures",
+  "description": "Adds an item to the end of an array.",
+  "template": "[[list]].push([[item]]);\n",
+  "params": [
+    {
+      "name": "list",
+      "type": "identifier",
+      "default": "myList"
+    },
+    {
+      "name": "item",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "func_def",
+  "display_name": "Define Function",
+  "category": "Functions",
+  "is_container": true,
+  "empty_body": "pass",
+  "description": "Defines a reusable function.",
+  "template": "def [[name]]([[params]]):\n[[body]]\n",
+  "params": [
+    {
+      "name": "name",
+      "type": "identifier",
+      "default": "my_function"
+    },
+    {
+      "name": "params",
+      "type": "expression",
+      "default": ""
+    }
+  ],
+  "match": {
+    "node_kind": "function_definition",
+    "slot_map": {
+      "name": "name",
+      "params": "parameters",
+      "body": "body"
+    }
+  }
+}

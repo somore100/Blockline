@@ -1,0 +1,19 @@
+{
+  "concept_id": "assign",
+  "display_name": "Assign Variable",
+  "category": "Basic",
+  "description": "Declares an int variable and assigns it a value. Assumes int type - use raw_code for other types.",
+  "template": "int [[variable]] = [[value]];\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "x"
+    },
+    {
+      "name": "value",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

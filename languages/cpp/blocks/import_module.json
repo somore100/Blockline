@@ -1,0 +1,13 @@
+{
+  "display_name": "Import Module",
+  "category": "Advanced",
+  "description": "Include a header. Provide the full header text including angle/quote brackets, e.g. <iostream> or <vector> or \"myheader.h\" - standard library headers don't take a .h extension in modern C++.",
+  "template": "#include [[module]]\n",
+  "params": [
+    {
+      "name": "module",
+      "type": "expression",
+      "default": "<iostream>"
+    }
+  ]
+}

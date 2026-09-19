@@ -1,0 +1,14 @@
+{
+  "concept_id": "comment",
+  "display_name": "Comment",
+  "category": "Basic",
+  "description": "An HTML comment - genuinely maps to the universal 'comment' concept, unlike most other HTML blocks.",
+  "template": "<!-- [[text]] -->\n",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "default": "This is a comment"
+    }
+  ]
+}

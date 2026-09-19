@@ -1,0 +1,3 @@
+{
+  "_comment": "Optional: map a block/concept id to a list of import lines that should be auto-added to the top of generated code whenever that block is used. Empty for now - e.g. later a 'sleep' block could map to {'sleep': ['import time']}."
+}

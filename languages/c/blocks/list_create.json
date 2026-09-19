@@ -1,0 +1,19 @@
+{
+  "concept_id": "list_create",
+  "display_name": "Create Array",
+  "category": "Data Structures",
+  "description": "Creates a fixed-size int array with initial items. C arrays cannot grow at runtime - see list_append.",
+  "template": "int [[variable]][] = {[[items]]};\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "my_array"
+    },
+    {
+      "name": "items",
+      "type": "expression",
+      "default": "1, 2, 3"
+    }
+  ]
+}

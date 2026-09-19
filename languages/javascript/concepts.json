@@ -1,0 +1,220 @@
+{
+  "print_output": {
+    "concept_id": "output",
+    "display_name": "Print Output",
+    "category": "Basic",
+    "description": "Prints a value to the console.",
+    "template": "console.log([[value]]);\n",
+    "params": [
+      {
+        "name": "value",
+        "type": "expression",
+        "default": "\"Hello, World!\""
+      }
+    ]
+  },
+  "assign_variable": {
+    "concept_id": "assign",
+    "display_name": "Assign Variable",
+    "category": "Basic",
+    "description": "Declares a block-scoped variable and assigns a value.",
+    "template": "let [[variable]] = [[value]];\n",
+    "params": [
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "x"
+      },
+      {
+        "name": "value",
+        "type": "expression",
+        "default": "0"
+      }
+    ]
+  },
+  "comment": {
+    "concept_id": "comment",
+    "display_name": "Comment",
+    "category": "Basic",
+    "description": "Adds a comment to the code.",
+    "template": "// [[text]]\n",
+    "params": [
+      {
+        "name": "text",
+        "type": "string",
+        "default": "This is a comment"
+      }
+    ]
+  },
+  "if_statement": {
+    "concept_id": "if",
+    "display_name": "If",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Runs the body only when the condition is true.",
+    "template": "if ([[condition]]) {\n[[body]]\n}\n",
+    "params": [
+      {
+        "name": "condition",
+        "type": "boolean",
+        "default": "true"
+      }
+    ]
+  },
+  "loop_for": {
+    "concept_id": "loop_for",
+    "display_name": "For Loop",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Iterates over an iterable using for...of.",
+    "template": "for (const [[variable]] of [[iterable]]) {\n[[body]]\n}\n",
+    "params": [
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "item"
+      },
+      {
+        "name": "iterable",
+        "type": "expression",
+        "default": "myList"
+      }
+    ]
+  },
+  "loop_while": {
+    "concept_id": "loop_while",
+    "display_name": "While Loop",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Repeats the body while the condition is true.",
+    "template": "while ([[condition]]) {\n[[body]]\n}\n",
+    "params": [
+      {
+        "name": "condition",
+        "type": "boolean",
+        "default": "true"
+      }
+    ]
+  },
+  "func_def": {
+    "concept_id": "func_def",
+    "display_name": "Define Function",
+    "category": "Functions",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Defines a function.",
+    "template": "function [[name]]([[params]]) {\n[[body]]\n}\n",
+    "params": [
+      {
+        "name": "name",
+        "type": "identifier",
+        "default": "myFunction"
+      },
+      {
+        "name": "params",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "func_call": {
+    "concept_id": "func_call",
+    "display_name": "Call Function",
+    "category": "Functions",
+    "description": "Calls a function.",
+    "template": "[[name]]([[args]]);\n",
+    "params": [
+      {
+        "name": "name",
+        "type": "identifier",
+        "default": "myFunction"
+      },
+      {
+        "name": "args",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "return_statement": {
+    "concept_id": "return",
+    "display_name": "Return",
+    "category": "Functions",
+    "description": "Returns a value from a function.",
+    "template": "return [[value]];\n",
+    "params": [
+      {
+        "name": "value",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "list_create": {
+    "concept_id": "list_create",
+    "display_name": "Create Array",
+    "category": "Data Structures",
+    "description": "Creates an array with initial items.",
+    "template": "let [[variable]] = [[[items]]];\n",
+    "params": [
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "myList"
+      },
+      {
+        "name": "items",
+        "type": "expression",
+        "default": "1, 2, 3"
+      }
+    ]
+  },
+  "list_append": {
+    "concept_id": "list_append",
+    "display_name": "Append to Array",
+    "category": "Data Structures",
+    "description": "Adds an item to the end of an array.",
+    "template": "[[list]].push([[item]]);\n",
+    "params": [
+      {
+        "name": "list",
+        "type": "identifier",
+        "default": "myList"
+      },
+      {
+        "name": "item",
+        "type": "expression",
+        "default": "0"
+      }
+    ]
+  },
+  "raw_code": {
+    "display_name": "Raw Code",
+    "category": "Advanced",
+    "description": "Write raw JavaScript code directly.",
+    "template": "[[code]]\n",
+    "params": [
+      {
+        "name": "code",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "import_module": {
+    "display_name": "Require Module",
+    "category": "Advanced",
+    "description": "Imports a module using Node.js CommonJS require() - simpler than ES module import/export syntax, which needs separate name and path slots.",
+    "template": "const [[module]] = require(\"[[module]]\");\n",
+    "params": [
+      {
+        "name": "module",
+        "type": "identifier",
+        "default": "fs"
+      }
+    ]
+  }
+}

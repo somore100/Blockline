@@ -1,0 +1,9 @@
+{
+  "display_name": "Div Container",
+  "category": "Basic",
+  "is_container": true,
+  "empty_body": "",
+  "description": "A generic container element for grouping other elements.",
+  "template": "<div>\n[[body]]\n</div>\n",
+  "params": []
+}

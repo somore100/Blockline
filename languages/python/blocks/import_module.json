@@ -1,0 +1,19 @@
+{
+  "display_name": "Import",
+  "category": "Basic",
+  "description": "Imports a module. Left non-translatable (no concept_id) since import syntax varies too much across languages to be a shared concept.",
+  "template": "import [[module]]\n",
+  "params": [
+    {
+      "name": "module",
+      "type": "identifier",
+      "default": "os"
+    }
+  ],
+  "match": {
+    "node_kind": "import_statement",
+    "slot_map": {
+      "module": "name"
+    }
+  }
+}

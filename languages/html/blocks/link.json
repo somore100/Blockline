@@ -1,0 +1,18 @@
+{
+  "display_name": "Link",
+  "category": "Basic",
+  "description": "A hyperlink.",
+  "template": "<a href=\"[[url]]\">[[text]]</a>\n",
+  "params": [
+    {
+      "name": "url",
+      "type": "string",
+      "default": "https://example.com"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "default": "Link text"
+    }
+  ]
+}

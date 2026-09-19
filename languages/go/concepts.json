@@ -1,0 +1,225 @@
+{
+  "print_output": {
+    "concept_id": "output",
+    "display_name": "Print Output",
+    "category": "Basic",
+    "description": "Prints a value followed by a newline, using the fmt package.",
+    "template": "fmt.Println([[value]])\n",
+    "params": [
+      {
+        "name": "value",
+        "type": "expression",
+        "default": "\"Hello, World!\""
+      }
+    ]
+  },
+  "assign_variable": {
+    "concept_id": "assign",
+    "display_name": "Assign Variable",
+    "category": "Basic",
+    "description": "Declares and initializes a variable using ':=' short variable declaration. IMPORTANT: Go's compiler rejects ':=' if [[variable]] already exists in the same scope with no new variables on the left ('no new variables on left side of :=') - use raw_code with plain '=' for reassigning an already-declared variable.",
+    "template": "[[variable]] := [[value]]\n",
+    "params": [
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "x"
+      },
+      {
+        "name": "value",
+        "type": "expression",
+        "default": "0"
+      }
+    ]
+  },
+  "comment": {
+    "concept_id": "comment",
+    "display_name": "Comment",
+    "category": "Basic",
+    "description": "Adds a comment to the code.",
+    "template": "// [[text]]\n",
+    "params": [
+      {
+        "name": "text",
+        "type": "string",
+        "default": "This is a comment"
+      }
+    ]
+  },
+  "if_statement": {
+    "concept_id": "if",
+    "display_name": "If",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Runs the body only when the condition is true. No parentheses around the condition.",
+    "template": "if [[condition]] {\n[[body]]\n}\n",
+    "params": [
+      {
+        "name": "condition",
+        "type": "boolean",
+        "default": "true"
+      }
+    ]
+  },
+  "loop_for": {
+    "concept_id": "loop_for",
+    "display_name": "For Loop",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Iterates over a slice/map using for-range, discarding the index/key with '_'.",
+    "template": "for _, [[variable]] := range [[iterable]] {\n[[body]]\n}\n",
+    "params": [
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "item"
+      },
+      {
+        "name": "iterable",
+        "type": "expression",
+        "default": "myList"
+      }
+    ]
+  },
+  "loop_while": {
+    "concept_id": "loop_while",
+    "display_name": "While Loop",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Go has no 'while' keyword - a bare 'for' with just a condition is the idiomatic equivalent.",
+    "template": "for [[condition]] {\n[[body]]\n}\n",
+    "params": [
+      {
+        "name": "condition",
+        "type": "boolean",
+        "default": "true"
+      }
+    ]
+  },
+  "func_def": {
+    "concept_id": "func_def",
+    "display_name": "Define Function",
+    "category": "Functions",
+    "is_container": true,
+    "empty_body": "",
+    "description": "Defines a function with no return value. Go supports multiple return values, which this simple block does not cover - use raw_code for those.",
+    "template": "func [[name]]([[params]]) {\n[[body]]\n}\n",
+    "params": [
+      {
+        "name": "name",
+        "type": "identifier",
+        "default": "myFunction"
+      },
+      {
+        "name": "params",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "func_call": {
+    "concept_id": "func_call",
+    "display_name": "Call Function",
+    "category": "Functions",
+    "description": "Calls a function.",
+    "template": "[[name]]([[args]])\n",
+    "params": [
+      {
+        "name": "name",
+        "type": "identifier",
+        "default": "myFunction"
+      },
+      {
+        "name": "args",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "return_statement": {
+    "concept_id": "return",
+    "display_name": "Return",
+    "category": "Functions",
+    "description": "Returns a value from a function.",
+    "template": "return [[value]]\n",
+    "params": [
+      {
+        "name": "value",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "list_create": {
+    "concept_id": "list_create",
+    "display_name": "Create Slice",
+    "category": "Data Structures",
+    "description": "Creates a slice with initial items.",
+    "template": "[[variable]] := [][[type]]{[[items]]}\n",
+    "params": [
+      {
+        "name": "type",
+        "type": "string",
+        "default": "int"
+      },
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "myList"
+      },
+      {
+        "name": "items",
+        "type": "expression",
+        "default": "1, 2, 3"
+      }
+    ]
+  },
+  "list_append": {
+    "concept_id": "list_append",
+    "display_name": "Append to Slice",
+    "category": "Data Structures",
+    "description": "Appends an item to a slice. Go's append() returns a (possibly new) slice, so the result must be reassigned back - this block does that automatically.",
+    "template": "[[list]] = append([[list]], [[item]])\n",
+    "params": [
+      {
+        "name": "list",
+        "type": "identifier",
+        "default": "myList"
+      },
+      {
+        "name": "item",
+        "type": "expression",
+        "default": "0"
+      }
+    ]
+  },
+  "raw_code": {
+    "display_name": "Raw Code",
+    "category": "Advanced",
+    "description": "Write raw Go code directly.",
+    "template": "[[code]]\n",
+    "params": [
+      {
+        "name": "code",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "import_module": {
+    "display_name": "Import",
+    "category": "Advanced",
+    "description": "Imports a single package. For multiple imports, Go conventionally groups them in one import(...) block - use raw_code for that form.",
+    "template": "import \"[[module]]\"\n",
+    "params": [
+      {
+        "name": "module",
+        "type": "identifier",
+        "default": "fmt"
+      }
+    ]
+  }
+}

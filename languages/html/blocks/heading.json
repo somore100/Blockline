@@ -1,0 +1,18 @@
+{
+  "display_name": "Heading",
+  "category": "Basic",
+  "description": "A heading element (h1-h6).",
+  "template": "<h[[level]]>[[text]]</h[[level]]>\n",
+  "params": [
+    {
+      "name": "level",
+      "type": "number",
+      "default": "1"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "default": "Heading"
+    }
+  ]
+}

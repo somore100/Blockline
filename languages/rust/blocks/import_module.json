@@ -1,0 +1,13 @@
+{
+  "display_name": "Use Declaration",
+  "category": "Advanced",
+  "description": "Brings a path into scope.",
+  "template": "use [[module]];\n",
+  "params": [
+    {
+      "name": "module",
+      "type": "identifier",
+      "default": "std::collections::HashMap"
+    }
+  ]
+}

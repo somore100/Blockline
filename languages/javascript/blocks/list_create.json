@@ -1,0 +1,19 @@
+{
+  "concept_id": "list_create",
+  "display_name": "Create Array",
+  "category": "Data Structures",
+  "description": "Creates an array with initial items.",
+  "template": "let [[variable]] = [[[items]]];\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "myList"
+    },
+    {
+      "name": "items",
+      "type": "expression",
+      "default": "1, 2, 3"
+    }
+  ]
+}

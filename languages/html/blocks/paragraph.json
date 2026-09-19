@@ -1,0 +1,13 @@
+{
+  "display_name": "Paragraph",
+  "category": "Basic",
+  "description": "A paragraph of text.",
+  "template": "<p>[[text]]</p>\n",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "default": "Paragraph text"
+    }
+  ]
+}

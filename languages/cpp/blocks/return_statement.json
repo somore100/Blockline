@@ -1,0 +1,14 @@
+{
+  "concept_id": "return",
+  "display_name": "Return Statement",
+  "category": "Functions",
+  "description": "Return a value from a function.",
+  "template": "return [[value]];\n",
+  "params": [
+    {
+      "name": "value",
+      "type": "expression",
+      "default": ""
+    }
+  ]
+}

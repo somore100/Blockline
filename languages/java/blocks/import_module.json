@@ -1,0 +1,13 @@
+{
+  "display_name": "Import",
+  "category": "Advanced",
+  "description": "Imports a class or package.",
+  "template": "import [[module]];\n",
+  "params": [
+    {
+      "name": "module",
+      "type": "identifier",
+      "default": "java.util.List"
+    }
+  ]
+}

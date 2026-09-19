@@ -1,0 +1,13 @@
+{
+  "display_name": "Import",
+  "category": "Advanced",
+  "description": "Imports a single package. For multiple imports, Go conventionally groups them in one import(...) block - use raw_code for that form.",
+  "template": "import \"[[module]]\"\n",
+  "params": [
+    {
+      "name": "module",
+      "type": "identifier",
+      "default": "fmt"
+    }
+  ]
+}

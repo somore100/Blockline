@@ -1,0 +1,15 @@
+[
+  {
+    "id": "method",
+    "node_kind": "method_declaration",
+    "header_template": "static void [[name]]([[params]])\n{",
+    "is_entry_point": false
+  },
+  {
+    "id": "start",
+    "node_kind": null,
+    "header_template": "static void Main(string[] args)\n{",
+    "is_entry_point": true,
+    "required": true
+  }
+]

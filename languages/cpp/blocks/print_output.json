@@ -1,0 +1,14 @@
+{
+  "concept_id": "output",
+  "display_name": "Print Output",
+  "category": "Basic",
+  "description": "Print a value to the console.",
+  "template": "std::cout << [[value]] << std::endl;\n",
+  "params": [
+    {
+      "name": "value",
+      "type": "expression",
+      "default": "\"Hello, World!\""
+    }
+  ]
+}

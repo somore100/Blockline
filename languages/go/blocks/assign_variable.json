@@ -1,0 +1,19 @@
+{
+  "concept_id": "assign",
+  "display_name": "Assign Variable",
+  "category": "Basic",
+  "description": "Declares and initializes a variable using ':=' short variable declaration. IMPORTANT: Go's compiler rejects ':=' if [[variable]] already exists in the same scope with no new variables on the left ('no new variables on left side of :=') - use raw_code with plain '=' for reassigning an already-declared variable.",
+  "template": "[[variable]] := [[value]]\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "x"
+    },
+    {
+      "name": "value",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "method",
+    "node_kind": "method_declaration",
+    "header_template": "public static void [[name]]([[params]]) {",
+    "is_entry_point": false
+  },
+  {
+    "id": "start",
+    "node_kind": null,
+    "header_template": "public static void main(String[] args) {",
+    "is_entry_point": true,
+    "required": true
+  }
+]

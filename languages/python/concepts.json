@@ -1,0 +1,302 @@
+{
+  "print": {
+    "concept_id": "output",
+    "display_name": "Print",
+    "category": "Basic",
+    "description": "Prints a value to the console.",
+    "template": "print([[value]])\n",
+    "params": [
+      {
+        "name": "value",
+        "type": "expression",
+        "default": "\"Hello, World!\""
+      }
+    ],
+    "match": {
+      "node_kind": "call",
+      "slot_map": {
+        "value": "arguments"
+      }
+    }
+  },
+  "assign": {
+    "concept_id": "assign",
+    "display_name": "Set Variable",
+    "category": "Basic",
+    "description": "Assigns a value to a variable.",
+    "template": "[[variable]] = [[value]]\n",
+    "params": [
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "x"
+      },
+      {
+        "name": "value",
+        "type": "expression",
+        "default": "0"
+      }
+    ],
+    "match": {
+      "node_kind": "assignment",
+      "slot_map": {
+        "variable": "left",
+        "value": "right"
+      }
+    }
+  },
+  "comment": {
+    "concept_id": "comment",
+    "display_name": "Comment",
+    "category": "Basic",
+    "description": "Adds a comment to the code.",
+    "template": "# [[text]]\n",
+    "params": [
+      {
+        "name": "text",
+        "type": "string",
+        "default": "This is a comment"
+      }
+    ],
+    "match": {
+      "node_kind": "comment",
+      "slot_map": {
+        "text": "self"
+      }
+    }
+  },
+  "if_statement": {
+    "concept_id": "if",
+    "display_name": "If",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "pass",
+    "description": "Runs the blocks inside its body only when the condition is true.",
+    "template": "if [[condition]]:\n[[body]]\n",
+    "params": [
+      {
+        "name": "condition",
+        "type": "boolean",
+        "default": "True"
+      }
+    ],
+    "match": {
+      "node_kind": "if_statement",
+      "slot_map": {
+        "condition": "condition",
+        "body": "consequence"
+      }
+    }
+  },
+  "loop_for": {
+    "concept_id": "loop_for",
+    "display_name": "For Loop",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "pass",
+    "description": "Repeats the blocks inside its body once per item in the iterable.",
+    "template": "for [[variable]] in [[iterable]]:\n[[body]]\n",
+    "params": [
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "i"
+      },
+      {
+        "name": "iterable",
+        "type": "expression",
+        "default": "range(10)"
+      }
+    ],
+    "match": {
+      "node_kind": "for_statement",
+      "slot_map": {
+        "variable": "left",
+        "iterable": "right",
+        "body": "body"
+      }
+    }
+  },
+  "loop_while": {
+    "concept_id": "loop_while",
+    "display_name": "While Loop",
+    "category": "Control",
+    "is_container": true,
+    "empty_body": "pass",
+    "description": "Repeats the blocks inside its body while the condition is true.",
+    "template": "while [[condition]]:\n[[body]]\n",
+    "params": [
+      {
+        "name": "condition",
+        "type": "boolean",
+        "default": "True"
+      }
+    ],
+    "match": {
+      "node_kind": "while_statement",
+      "slot_map": {
+        "condition": "condition",
+        "body": "body"
+      }
+    }
+  },
+  "func_def": {
+    "concept_id": "func_def",
+    "display_name": "Define Function",
+    "category": "Functions",
+    "is_container": true,
+    "empty_body": "pass",
+    "description": "Defines a reusable function.",
+    "template": "def [[name]]([[params]]):\n[[body]]\n",
+    "params": [
+      {
+        "name": "name",
+        "type": "identifier",
+        "default": "my_function"
+      },
+      {
+        "name": "params",
+        "type": "expression",
+        "default": ""
+      }
+    ],
+    "match": {
+      "node_kind": "function_definition",
+      "slot_map": {
+        "name": "name",
+        "params": "parameters",
+        "body": "body"
+      }
+    }
+  },
+  "func_call": {
+    "concept_id": "func_call",
+    "display_name": "Call Function",
+    "category": "Functions",
+    "description": "Calls a function.",
+    "template": "[[name]]([[args]])\n",
+    "params": [
+      {
+        "name": "name",
+        "type": "identifier",
+        "default": "my_function"
+      },
+      {
+        "name": "args",
+        "type": "expression",
+        "default": ""
+      }
+    ],
+    "match": {
+      "node_kind": "call",
+      "slot_map": {
+        "name": "function",
+        "args": "arguments"
+      }
+    }
+  },
+  "return_statement": {
+    "concept_id": "return",
+    "display_name": "Return",
+    "category": "Functions",
+    "description": "Returns a value from a function.",
+    "template": "return [[value]]\n",
+    "params": [
+      {
+        "name": "value",
+        "type": "expression",
+        "default": ""
+      }
+    ],
+    "match": {
+      "node_kind": "return_statement",
+      "slot_map": {
+        "value": "child:0"
+      }
+    }
+  },
+  "list_create": {
+    "concept_id": "list_create",
+    "display_name": "Create List",
+    "category": "Data Structures",
+    "description": "Creates a new list with the given items.",
+    "template": "[[variable]] = [[[items]]]\n",
+    "params": [
+      {
+        "name": "variable",
+        "type": "identifier",
+        "default": "my_list"
+      },
+      {
+        "name": "items",
+        "type": "expression",
+        "default": "1, 2, 3"
+      }
+    ],
+    "match": {
+      "node_kind": "assignment",
+      "slot_map": {
+        "variable": "left",
+        "items": "right"
+      }
+    }
+  },
+  "list_append": {
+    "concept_id": "list_append",
+    "display_name": "Append to List",
+    "category": "Data Structures",
+    "description": "Adds an item to the end of a list.",
+    "template": "[[list]].append([[item]])\n",
+    "params": [
+      {
+        "name": "list",
+        "type": "identifier",
+        "default": "my_list"
+      },
+      {
+        "name": "item",
+        "type": "expression",
+        "default": "item"
+      }
+    ],
+    "match": {
+      "node_kind": "call",
+      "slot_map": {
+        "list": "function.object",
+        "item": "arguments"
+      }
+    }
+  },
+  "raw_code": {
+    "display_name": "Custom Code",
+    "category": "Advanced",
+    "description": "Write any Python code manually. No concept_id - this is the deliberate non-translatable escape hatch (Phase 3 point 10), unchanged behavior from V1.",
+    "template": "[[code]]\n",
+    "params": [
+      {
+        "name": "code",
+        "type": "expression",
+        "default": ""
+      }
+    ]
+  },
+  "import_module": {
+    "display_name": "Import",
+    "category": "Basic",
+    "description": "Imports a module. Left non-translatable (no concept_id) since import syntax varies too much across languages to be a shared concept.",
+    "template": "import [[module]]\n",
+    "params": [
+      {
+        "name": "module",
+        "type": "identifier",
+        "default": "os"
+      }
+    ],
+    "match": {
+      "node_kind": "import_statement",
+      "slot_map": {
+        "module": "name"
+      }
+    }
+  }
+}

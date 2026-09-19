@@ -1,0 +1,26 @@
+{
+  "concept_id": "list_create",
+  "display_name": "Create List",
+  "category": "Data Structures",
+  "description": "Creates a new list with the given items.",
+  "template": "[[variable]] = [[[items]]]\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "my_list"
+    },
+    {
+      "name": "items",
+      "type": "expression",
+      "default": "1, 2, 3"
+    }
+  ],
+  "match": {
+    "node_kind": "assignment",
+    "slot_map": {
+      "variable": "left",
+      "items": "right"
+    }
+  }
+}

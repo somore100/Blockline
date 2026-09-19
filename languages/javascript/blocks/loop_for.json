@@ -1,0 +1,21 @@
+{
+  "concept_id": "loop_for",
+  "display_name": "For Loop",
+  "category": "Control",
+  "is_container": true,
+  "empty_body": "",
+  "description": "Iterates over an iterable using for...of.",
+  "template": "for (const [[variable]] of [[iterable]]) {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "item"
+    },
+    {
+      "name": "iterable",
+      "type": "expression",
+      "default": "myList"
+    }
+  ]
+}

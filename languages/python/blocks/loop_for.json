@@ -1,0 +1,29 @@
+{
+  "concept_id": "loop_for",
+  "display_name": "For Loop",
+  "category": "Control",
+  "is_container": true,
+  "empty_body": "pass",
+  "description": "Repeats the blocks inside its body once per item in the iterable.",
+  "template": "for [[variable]] in [[iterable]]:\n[[body]]\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "i"
+    },
+    {
+      "name": "iterable",
+      "type": "expression",
+      "default": "range(10)"
+    }
+  ],
+  "match": {
+    "node_kind": "for_statement",
+    "slot_map": {
+      "variable": "left",
+      "iterable": "right",
+      "body": "body"
+    }
+  }
+}

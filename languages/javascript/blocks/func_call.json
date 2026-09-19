@@ -1,0 +1,19 @@
+{
+  "concept_id": "func_call",
+  "display_name": "Call Function",
+  "category": "Functions",
+  "description": "Calls a function.",
+  "template": "[[name]]([[args]]);\n",
+  "params": [
+    {
+      "name": "name",
+      "type": "identifier",
+      "default": "myFunction"
+    },
+    {
+      "name": "args",
+      "type": "expression",
+      "default": ""
+    }
+  ]
+}

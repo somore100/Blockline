@@ -1,0 +1,19 @@
+{
+  "concept_id": "assign",
+  "display_name": "Assign Variable",
+  "category": "Basic",
+  "description": "Declares a local variable with type inference (Java 10+ 'var') and assigns a value.",
+  "template": "var [[variable]] = [[value]];\n",
+  "params": [
+    {
+      "name": "variable",
+      "type": "identifier",
+      "default": "x"
+    },
+    {
+      "name": "value",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

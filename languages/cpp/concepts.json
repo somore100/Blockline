@@ -1,0 +1,145 @@
+{
+  "print_output": {
+    "concept_id": "output",
+    "display_name": "Print Output",
+    "category": "Basic",
+    "description": "Print a value to the console.",
+    "template": "std::cout << [[value]] << std::endl;\n",
+    "params": [
+      { "name": "value", "type": "expression", "default": "\"Hello, World!\"" }
+    ]
+  },
+  "assign_variable": {
+    "concept_id": "assign",
+    "display_name": "Assign Variable",
+    "category": "Basic",
+    "description": "Set a variable to a value.",
+    "template": "[[variable]] = [[value]];\n",
+    "params": [
+      { "name": "variable", "type": "identifier", "default": "x" },
+      { "name": "value", "type": "expression", "default": "0" }
+    ]
+  },
+  "comment": {
+    "concept_id": "comment",
+    "display_name": "Comment",
+    "category": "Basic",
+    "description": "Add a code comment.",
+    "template": "// [[text]]\n",
+    "params": [
+      { "name": "text", "type": "string", "default": "This is a comment" }
+    ]
+  },
+  "if_statement": {
+    "concept_id": "if",
+    "display_name": "If Statement",
+    "category": "Control",
+    "description": "Conditional execution based on a condition.",
+    "is_container": true,
+    "empty_body": "",
+    "template": "if ([[condition]]) {\n[[body]]\n}\n",
+    "params": [
+      { "name": "condition", "type": "boolean", "default": "true" }
+    ]
+  },
+  "loop_for": {
+    "concept_id": "loop_for",
+    "display_name": "For Loop",
+    "category": "Control",
+    "description": "Iterate over a range or container using a range-based for loop.",
+    "is_container": true,
+    "empty_body": "",
+    "template": "for (auto&& [[variable]] : [[iterable]]) {\n[[body]]\n}\n",
+    "params": [
+      { "name": "variable", "type": "identifier", "default": "item" },
+      { "name": "iterable", "type": "expression", "default": "myList" }
+    ]
+  },
+  "loop_while": {
+    "concept_id": "loop_while",
+    "display_name": "While Loop",
+    "category": "Control",
+    "description": "Repeat as long as a condition is true.",
+    "is_container": true,
+    "empty_body": "",
+    "template": "while ([[condition]]) {\n[[body]]\n}\n",
+    "params": [
+      { "name": "condition", "type": "boolean", "default": "true" }
+    ]
+  },
+  "func_def": {
+    "concept_id": "func_def",
+    "display_name": "Function Definition",
+    "category": "Functions",
+    "description": "Define a new function. Return type defaults to void - use raw_code for other return types until a dedicated typed-function block exists.",
+    "is_container": true,
+    "empty_body": "",
+    "template": "void [[name]]([[params]]) {\n[[body]]\n}\n",
+    "params": [
+      { "name": "name", "type": "identifier", "default": "myFunction" },
+      { "name": "params", "type": "expression", "default": "" }
+    ]
+  },
+  "func_call": {
+    "concept_id": "func_call",
+    "display_name": "Function Call",
+    "category": "Functions",
+    "description": "Call a function.",
+    "template": "[[name]]([[args]]);\n",
+    "params": [
+      { "name": "name", "type": "identifier", "default": "myFunction" },
+      { "name": "args", "type": "expression", "default": "" }
+    ]
+  },
+  "return_statement": {
+    "concept_id": "return",
+    "display_name": "Return Statement",
+    "category": "Functions",
+    "description": "Return a value from a function.",
+    "template": "return [[value]];\n",
+    "params": [
+      { "name": "value", "type": "expression", "default": "" }
+    ]
+  },
+  "list_create": {
+    "concept_id": "list_create",
+    "display_name": "Create List",
+    "category": "Data Structures",
+    "description": "Create a std::vector with initial items.",
+    "template": "std::vector<[[type]]> [[variable]] = {[[items]]};\n",
+    "params": [
+      { "name": "type", "type": "string", "default": "int" },
+      { "name": "variable", "type": "identifier", "default": "myList" },
+      { "name": "items", "type": "expression", "default": "1, 2, 3" }
+    ]
+  },
+  "list_append": {
+    "concept_id": "list_append",
+    "display_name": "Append to List",
+    "category": "Data Structures",
+    "description": "Add an item to the end of a std::vector.",
+    "template": "[[list]].push_back([[item]]);\n",
+    "params": [
+      { "name": "list", "type": "identifier", "default": "myList" },
+      { "name": "item", "type": "expression", "default": "item" }
+    ]
+  },
+  "raw_code": {
+    "display_name": "Raw Code",
+    "category": "Advanced",
+    "description": "Write raw C++ code directly.",
+    "template": "[[code]]\n",
+    "params": [
+      { "name": "code", "type": "expression", "default": "" }
+    ]
+  },
+  "import_module": {
+    "display_name": "Import Module",
+    "category": "Advanced",
+    "description": "Include a header. Provide the full header text including angle/quote brackets, e.g. <iostream> or <vector> or \"myheader.h\" - standard library headers don't take a .h extension in modern C++.",
+    "template": "#include [[module]]\n",
+    "params": [
+      { "name": "module", "type": "expression", "default": "<iostream>" }
+    ]
+  }
+}

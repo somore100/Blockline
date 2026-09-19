@@ -1,0 +1,19 @@
+{
+  "concept_id": "list_append",
+  "display_name": "Push to Vector",
+  "category": "Data Structures",
+  "description": "Adds an item to the end of a Vec. Requires the vec was declared with 'mut' (see list_create).",
+  "template": "[[list]].push([[item]]);\n",
+  "params": [
+    {
+      "name": "list",
+      "type": "identifier",
+      "default": "my_vec"
+    },
+    {
+      "name": "item",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

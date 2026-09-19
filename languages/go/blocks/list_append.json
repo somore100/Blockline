@@ -1,0 +1,19 @@
+{
+  "concept_id": "list_append",
+  "display_name": "Append to Slice",
+  "category": "Data Structures",
+  "description": "Appends an item to a slice. Go's append() returns a (possibly new) slice, so the result must be reassigned back - this block does that automatically.",
+  "template": "[[list]] = append([[list]], [[item]])\n",
+  "params": [
+    {
+      "name": "list",
+      "type": "identifier",
+      "default": "myList"
+    },
+    {
+      "name": "item",
+      "type": "expression",
+      "default": "0"
+    }
+  ]
+}

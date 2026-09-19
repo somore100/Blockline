@@ -1,0 +1,9 @@
+[
+  {
+    "id": "document",
+    "node_kind": null,
+    "header_template": null,
+    "is_entry_point": true,
+    "required": false
+  }
+]

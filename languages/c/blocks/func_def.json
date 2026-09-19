@@ -1,0 +1,21 @@
+{
+  "concept_id": "func_def",
+  "display_name": "Define Function",
+  "category": "Functions",
+  "is_container": true,
+  "empty_body": "",
+  "description": "Defines a function. Return type defaults to void - use raw_code for other return types.",
+  "template": "void [[name]]([[params]]) {\n[[body]]\n}\n",
+  "params": [
+    {
+      "name": "name",
+      "type": "identifier",
+      "default": "my_function"
+    },
+    {
+      "name": "params",
+      "type": "expression",
+      "default": "void"
+    }
+  ]
+}
